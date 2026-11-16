@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misi Siap Baligh — PAI Kelas 4</title>
+<style>
+:root{--ink:#183047;--muted:#5e7180;--green:#167c68;--green2:#dff5ec;--gold:#f4bd4f;--cream:#fffaf0;--blue:#eaf4ff;--pink:#fff0ed;--line:#dce7e4;--white:#fff;--shadow:0 12px 32px #173b4b12}
+*{box-sizing:border-box}body{margin:0;background:#f4f8f6;color:var(--ink);font:16px/1.6 "Segoe UI",Arial,sans-serif}
+header{background:linear-gradient(120deg,#0e6659,#178d75);color:white;padding:26px max(5vw,20px) 30px;position:relative;overflow:hidden}
+header:after{content:"☾";position:absolute;right:7%;top:-45px;font-size:190px;color:#ffffff13}
+.topline{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;opacity:.85;font-weight:700}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:10px 0}
+header p{max-width:720px;margin:10px 0 0;color:#e3fff6}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 60px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:16px;margin-top:-4px}
+.card{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.hero-card{background:var(--cream);display:flex;gap:16px;align-items:center}
+.mascot{font-size:62px;flex:0 0 auto}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--green);font-weight:800}
+h2{font-size:23px;margin:3px 0 10px;line-height:1.25}
+h3{font-size:18px;margin:0 0 8px}
+p{margin:7px 0}
+.small{font-size:13px;color:var(--muted)}
+.pill{display:inline-block;padding:4px 10px;border-radius:99px;background:var(--green2);color:#12644f;font-size:12px;font-weight:700;margin:3px 4px 3px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 14px}
+nav button,.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:750;cursor:pointer;background:#e5efeb;color:var(--ink);font-size:14px}
+nav button.active,.btn.primary{background:var(--green);color:white}
+.btn.gold{background:var(--gold);color:#3f3214}.btn.ghost{background:#edf3f2}
+button:focus-visible{outline:3px solid #f4bd4f;outline-offset:2px}
+.panel{display:none}.panel.active{display:block}
+.progress{height:9px;background:#e7efec;border-radius:99px;overflow:hidden;margin:12px 0 18px}.progress span{display:block;height:100%;background:var(--gold);width:0;transition:.3s}
+.story{background:var(--blue);border-left:5px solid #6aa7d8;border-radius:14px;padding:16px;margin:12px 0}
+.callout{background:var(--green2);border-radius:14px;padding:14px;margin:12px 0}
+.warn{background:var(--pink);border-radius:14px;padding:14px;margin:12px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fff}
+.tile .emoji{font-size:30px}
+.step{display:flex;gap:12px;align-items:flex-start;margin:13px 0}
+.num{background:var(--green);color:#fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-weight:800;flex:0 0 30px}
+.interact{border:2px dashed #9bcbbd;border-radius:16px;padding:16px;margin:15px 0;background:#fbfffd}
+.choice{display:block;width:100%;text-align:left;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:white;margin:8px 0;cursor:pointer;color:var(--ink)}
+.choice:hover{border-color:var(--green);background:#f5fcf8}
+.feedback{padding:12px;border-radius:12px;margin-top:10px;display:none}.feedback.show{display:block}.correct{background:#e2f7e9;color:#155b36}.incorrect{background:#fff0e8;color:#8b3d1b}
+input[type=text]{width:100%;padding:12px;border:1px solid #cbd9d4;border-radius:10px;font:inherit}
+.question{padding:17px;border:1px solid var(--line);border-radius:16px;margin:13px 0;background:#fff}
+.qnum{font-size:12px;font-weight:800;color:var(--green);letter-spacing:.8px}
+.result{display:none;text-align:center;padding:22px;background:var(--cream);border-radius:18px;margin-top:18px}
+.score{font-size:42px;font-weight:900;color:var(--green)}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
+@media(max-width:760px){.hero-grid,.two,.three{grid-template-columns:1fr}.hero-card{align-items:flex-start}.mascot{font-size:48px}nav button{flex:1 1 42%}}
+@media print{nav,.btn{display:none!important}.panel{display:block!important}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="topline">Media Pembelajaran Interaktif • PAI SD Kelas 4</div>
+ <h1>🌙 Misi Siap Baligh</h1>
+ <p>Kenali perubahan diri, pahami tanggung jawab, dan latih kebiasaan ibadah dengan tenang, santun, dan penuh percaya diri.</p>
+</header>
+<main class="wrap">
+ <section class="hero-grid">
+  <div class="card hero-card"><div class="mascot">🧭</div><div><div class="eyebrow">Petualangan belajar</div><h2>Setiap anak tumbuh pada waktunya.</h2><p>Ikuti 5 pos belajar, selesaikan tantangan, lalu uji pemahamanmu melalui 20 soal.</p><span class="pill">Belajar 35–45 menit</span><span class="pill">Bisa digunakan offline</span></div></div>
+  <div class="card"><div class="eyebrow">Target misi</div><h3>Aku mampu…</h3><p>✓ Menjelaskan makna baligh secara sederhana.</p><p>✓ Memahami tanggung jawab ibadah.</p><p>✓ Mengenali puasa, salat Jumat, dan salat sunah.</p></div>
+ </section>
+ <div class="card" style="margin-top:15px">
+  <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><strong>Perjalanan belajarku</strong><span class="small" id="progressText">0 dari 5 pos selesai</span></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="small">Petunjuk: pilih menu pos belajar. Bacalah, diskusikan, lalu kerjakan interaksi di setiap pos.</div>
+ </div>
+ <nav aria-label="Menu pembelajaran">
+  <button class="active" data-tab="pemantik">🎈 Pemantik</button>
+  <button data-tab="pos1">1. Mengenal Baligh</button>
+  <button data-tab="pos2">2. Tanggung Jawab</button>
+  <button data-tab="pos3">3. Puasa Ramadan</button>
+  <button data-tab="pos4">4. Salat Jumat</button>
+  <button data-tab="pos5">5. Salat Sunah</button>
+  <button data-tab="kuis">🧠 Kuis 20 Soal</button>
+  <button data-tab="aksi">🌱 Tantangan Aksi</button>
+ </nav>
+
+ <section class="panel active" id="pemantik">
+  <div class="card">
+   <div class="eyebrow">Aktivitas pemantik • 5–10 menit</div><h2>Kasus: “Aku sudah semakin besar!”</h2>
+   <div class="story"><strong>Cerita singkat</strong><p>Rafi dan Alya sedang berbincang setelah pelajaran PAI. Rafi bercerita bahwa kakaknya mulai berpuasa penuh dan lebih rajin salat. Alya mendengar bahwa setiap orang akan mengalami masa tumbuh dewasa. Mereka bertanya-tanya: “Apa arti baligh? Apakah semua anak mengalaminya pada usia yang sama? Apa yang perlu dipersiapkan?”</p></div>
+   <h3>Ayo pikirkan bersama!</h3>
+   <ol><li>Menurutmu, apakah pertumbuhan setiap anak selalu sama waktunya?</li><li>Mengapa kita perlu belajar tentang tanggung jawab ibadah sejak sekarang?</li><li>Kebiasaan baik apa yang bisa mulai kamu latih hari ini?</li></ol>
+   <div class="interact"><strong>Tebak kata!</strong><p>Aku adalah masa ketika seorang Muslim mulai terkena kewajiban agama secara penuh. Siapakah aku?</p>
+    <button class="btn gold" onclick="reveal('tebak')">Lihat petunjuk/jawaban</button><div id="tebak" class="feedback correct">Jawabannya: <b>baligh</b>. Kita akan mempelajarinya dengan bahasa yang santun dan sesuai usia.</div></div>
+   <p class="small"><b>Peran guru:</b> terima jawaban murid tanpa menghakimi. Tegaskan bahwa perkembangan tubuh bersifat pribadi; murid tidak perlu menceritakan pengalaman pribadi di depan kelas.</p>
+   <button class="btn primary" onclick="go('pos1')">Mulai Pos 1 →</button>
+  </div>
+ </section>
+
+ <section class="panel" id="pos1"><div class="card">
+  <div class="eyebrow">Micro-learning 1 • 6 menit</div><h2>Pos 1 — Apa itu baligh?</h2>
+  <div class="story"><b>Baligh</b> adalah keadaan ketika seseorang telah mencapai tahap dewasa menurut ketentuan agama Islam. Sejak baligh, seorang Muslim mulai memikul tanggung jawab menjalankan perintah Allah dan menjauhi larangan-Nya.</div>
+  <div class="two">
+   <div class="tile"><div class="emoji">🌱</div><h3>Setiap anak bertumbuh</h3><p>Perubahan tubuh dan kesiapan setiap orang tidak selalu sama. Kita harus saling menghormati dan tidak mengejek perubahan fisik teman.</p></div>
+   <div class="tile"><div class="emoji">📘</div><h3>Tanda baligh (ringkas)</h3><p>Dalam fikih, tanda yang dibahas antara lain keluarnya mani saat mimpi (ihtilam) pada laki-laki maupun perempuan, serta haid pada perempuan. Ketentuan usia juga dibahas dalam fikih.</p></div>
+  </div>
+  <div class="callout"><b>Ingat:</b> materi ini bukan ajakan untuk membandingkan tubuh teman. Jika memiliki pertanyaan tentang perubahan tubuh, bicarakan secara pribadi dengan orang tua/wali atau guru yang dipercaya.</div>
+  <h3>Benar atau perlu diperbaiki?</h3><p>“Semua anak pasti mengalami baligh pada usia dan waktu yang sama.”</p>
+  <div class="interact"><button class="btn ghost" onclick="feedback('b1','Salah. Waktu pertumbuhan setiap orang berbeda. Kita perlu menghormati perbedaan.','bad')">Benar</button> <button class="btn primary" onclick="feedback('b1','Tepat! Setiap orang tumbuh dengan waktu yang berbeda.','good')">Perlu diperbaiki</button><div id="b1" class="feedback"></div></div>
+  <button class="btn primary" onclick="complete(1);go('pos2')">Pos 1 selesai →</button>
+ </div></section>
+
+ <section class="panel" id="pos2"><div class="card">
+  <div class="eyebrow">Micro-learning 2 • 6 menit</div><h2>Pos 2 — Tanggung jawab setelah baligh</h2>
+  <p>Ketika sudah baligh, seorang Muslim bertanggung jawab menjalankan kewajiban agama sesuai kemampuan dan ketentuan syariat. Karena itu, kita berlatih sejak kecil.</p>
+  <div class="three">
+   <div class="tile"><div class="emoji">🕌</div><h3>Salat</h3><p>Menjaga salat lima waktu dengan tertib.</p></div>
+   <div class="tile"><div class="emoji">🌙</div><h3>Puasa Ramadan</h3><p>Berpuasa bagi Muslim yang telah memenuhi syarat dan mampu.</p></div>
+   <div class="tile"><div class="emoji">💚</div><h3>Akhlak baik</h3><p>Jujur, menjaga lisan, menghormati orang tua, dan berbuat baik.</p></div>
+  </div>
+  <div class="story"><b>Studi kasus:</b> Dina melihat temannya diejek karena perubahan fisiknya. Dina ingin membantu. Apa tindakan yang tepat?</div>
+  <div class="interact"><button class="choice" onclick="feedback('b2','Tepat. Hentikan ejekan dengan santun, dukung teman, dan minta bantuan guru bila diperlukan.','good')">A. Mengingatkan dengan santun dan meminta bantuan guru bila perlu.</button><button class="choice" onclick="feedback('b2','Tidak tepat. Ikut menertawakan dapat menyakiti perasaan teman.','bad')">B. Ikut tertawa agar dianggap lucu.</button><button class="choice" onclick="feedback('b2','Tidak tepat. Membagikan cerita pribadi teman melanggar privasinya.','bad')">C. Menyebarkan ceritanya ke grup kelas.</button><div id="b2" class="feedback"></div></div>
+  <div class="callout"><b>Latihan 1 menit:</b> ucapkan dalam hati satu kebiasaan ibadah yang ingin kamu latih lebih teratur.</div>
+  <button class="btn primary" onclick="complete(2);go('pos3')">Pos 2 selesai →</button>
+ </div></section>
+
+ <section class="panel" id="pos3"><div class="card">
+  <div class="eyebrow">Micro-learning 3 • 6 menit</div><h2>Pos 3 — Puasa Ramadan</h2>
+  <div class="story"><b>Puasa Ramadan</b> adalah menahan diri dari hal-hal yang membatalkan puasa sejak terbit fajar hingga terbenam matahari, disertai niat karena Allah.</div>
+  <div class="two">
+   <div class="tile"><div class="emoji">🥣</div><h3>Sebelum fajar</h3><p>Berniat puasa dan makan sahur. Sahur membantu tubuh memiliki tenaga.</p></div>
+   <div class="tile"><div class="emoji">🌇</div><h3>Saat Magrib</h3><p>Menyegerakan berbuka ketika waktunya tiba, berdoa, dan tidak berlebihan saat makan.</p></div>
+  </div>
+  <h3>Siapa yang wajib berpuasa?</h3><p>Puasa Ramadan diwajibkan bagi Muslim yang telah baligh, berakal, dan mampu. Ada keringanan bagi orang dengan alasan syar'i, misalnya sakit atau sedang bepergian, sesuai ketentuan fikih. Anak yang belum baligh dapat belajar berpuasa secara bertahap dengan bimbingan orang tua.</p>
+  <div class="warn"><b>Jaga kesehatan:</b> anak tidak perlu memaksakan diri. Jika merasa tidak sehat, segera beri tahu orang tua/guru.</div>
+  <div class="interact"><b>Susun urutan kegiatan Ramadan!</b><p>Pilih urutan yang tepat.</p><button class="choice" onclick="feedback('b3','Benar! Sahur dilakukan sebelum fajar, kemudian menahan diri saat berpuasa, lalu berbuka setelah matahari terbenam.','good')">Sahur → berpuasa → berbuka saat Magrib</button><button class="choice" onclick="feedback('b3','Belum tepat. Berbuka dilakukan setelah waktu Magrib tiba.','bad')">Berbuka → sahur → berpuasa</button><div id="b3" class="feedback"></div></div>
+  <button class="btn primary" onclick="complete(3);go('pos4')">Pos 3 selesai →</button>
+ </div></section>
+
+ <section class="panel" id="pos4"><div class="card">
+  <div class="eyebrow">Micro-learning 4 • 6 menit</div><h2>Pos 4 — Salat Jumat</h2>
+  <div class="story"><b>Salat Jumat</b> adalah salat berjamaah dua rakaat pada waktu Zuhur di hari Jumat, didahului dua khutbah. Salat Jumat merupakan kewajiban bagi laki-laki Muslim yang memenuhi syarat, seperti baligh, berakal, merdeka, mukim, dan tidak memiliki uzur syar'i, menurut ketentuan fikih.</div>
+  <div class="two">
+   <div class="tile"><div class="emoji">🧼</div><h3>Persiapan</h3><p>Mandi, membersihkan diri, memakai pakaian bersih dan sopan, serta berangkat tepat waktu.</p></div>
+   <div class="tile"><div class="emoji">👂</div><h3>Saat khutbah</h3><p>Duduk tenang, mendengarkan khutbah, tidak bercakap-cakap, dan menjaga ketertiban.</p></div>
+  </div>
+  <div class="callout"><b>Bagaimana dengan perempuan?</b><p>Salat Jumat tidak diwajibkan bagi perempuan. Perempuan tetap melaksanakan salat Zuhur. Jika perempuan mengikuti salat Jumat berjamaah dengan ketentuan yang benar, salat Jumatnya sah dan tidak perlu mengulang Zuhur.</p></div>
+  <div class="interact"><b>Kasus:</b> Farhan datang ke masjid ketika khutbah sedang berlangsung. Apa sikap terbaik?</p><button class="choice" onclick="feedback('b4','Tepat. Masuk dengan tenang, tidak mengganggu jamaah, lalu duduk dan mendengarkan khutbah.','good')">Masuk dengan tenang dan mendengarkan khutbah.</button><button class="choice" onclick="feedback('b4','Tidak tepat. Berbicara saat khutbah dapat mengganggu kekhusyukan.','bad')">Mengobrol keras dengan teman.</button><button class="choice" onclick="feedback('b4','Tidak tepat. Kita harus menjaga ketertiban dan menghormati jamaah lain.','bad')">Berlari-lari di antara saf.</button><div id="b4" class="feedback"></div></div>
+  <button class="btn primary" onclick="complete(4);go('pos5')">Pos 4 selesai →</button>
+ </div></section>
+
+ <section class="panel" id="pos5"><div class="card">
+  <div class="eyebrow">Micro-learning 5 • 6 menit</div><h2>Pos 5 — Mengenal salat sunah</h2>
+  <p>Salat sunah adalah salat yang dianjurkan dalam Islam. Jika dikerjakan mendapat pahala, dan jika ditinggalkan tidak berdosa. Salat sunah melatih kedekatan kita kepada Allah.</p>
+  <div class="three">
+   <div class="tile"><div class="emoji">🌅</div><h3>D duha</h3><p>Dikerjakan pada waktu duha, setelah matahari naik hingga menjelang Zuhur.</p></div>
+   <div class="tile"><div class="emoji">🌌</div><h3>Tahajud</h3><p>Dikerjakan pada malam hari setelah tidur, sebelum waktu Subuh.</p></div>
+   <div class="tile"><div class="emoji">🤲</div><h3>Rawatib</h3><p>Salat sunah yang mengiringi salat fardu, ada yang sebelum dan sesudahnya.</p></div>
+  </div>
+  <div class="story"><b>Contoh kontekstual:</b> Sebelum pelajaran dimulai, sekolah mengadakan kegiatan duha bersama. Murid mengikuti dengan tertib sesuai arahan guru.</div>
+  <div class="interact"><b>Mini-game: Pasangkan waktu dan salat!</b><p>Pilih salat yang sesuai dengan petunjuk.</p><button class="choice" onclick="feedback('b5','Benar! Salat duha dikerjakan pada waktu duha.','good')">Pagi setelah matahari naik — Duha</button><button class="choice" onclick="feedback('b5','Belum tepat. Tahajud dilakukan pada malam hari setelah tidur.','bad')">Malam setelah tidur — Rawatib</button><button class="choice" onclick="feedback('b5','Belum tepat. Rawatib mengiringi salat fardu.','bad')">Mengiringi salat fardu — Tahajud</button><div id="b5" class="feedback"></div></div>
+  <div class="callout"><b>Pesan penting:</b> lakukan ibadah dengan ikhlas, belajar tata caranya dari guru/orang tua, dan jangan merendahkan orang lain yang masih belajar.</div>
+  <button class="btn primary" onclick="complete(5);go('kuis')">Semua pos selesai — mulai kuis →</button>
+ </div></section>
+
+ <section class="panel" id="kuis"><div class="card">
+  <div class="eyebrow">Asesmen formatif • 20 soal</div><h2>Uji pemahamanmu!</h2><p>Pilih satu jawaban terbaik pada setiap soal. Setelah menjawab, tekan <b>Periksa jawaban</b> untuk melihat skor dan pembahasan.</p>
+  <div id="quiz"></div>
+  <button class="btn primary" onclick="gradeQuiz()">Periksa jawaban</button> <button class="btn ghost" onclick="resetQuiz()">Ulangi kuis</button>
+  <div class="result" id="result"><div class="eyebrow">Hasil belajarmu</div><div class="score" id="score">0/20</div><h3 id="resultTitle">Terus berlatih!</h3><p id="resultText"></p></div>
+ </div></section>
+
+ <section class="panel" id="aksi"><div class="card">
+  <div class="eyebrow">Tantangan tindak lanjut • 10 menit + praktik di rumah</div><h2>Misi “Keluarga Siap Ibadah”</h2>
+  <div class="story">Selama tiga hari, pilih satu kebiasaan baik yang bisa dilakukan bersama keluarga: menyiapkan perlengkapan salat, salat tepat waktu, membantu menyiapkan sahur saat Ramadan, atau belajar tata cara salat sunah bersama orang tua.</div>
+  <h3>Rencana aksiku</h3>
+  <label for="aksiNama"><b>Nama kebiasaan yang ingin kulatih:</b></label><input id="aksiNama" type="text" placeholder="Contoh: menyiapkan perlengkapan salat">
+  <p><b>Centang setelah dilakukan:</b></p>
+  <label><input type="checkbox"> Hari pertama</label><br><label><input type="checkbox"> Hari kedua</label><br><label><input type="checkbox"> Hari ketiga</label>
+  <div class="interact"><b>Refleksi singkat:</b><p>Apa yang terasa mudah? Apa yang ingin kamu perbaiki? Ceritakan kepada guru atau keluarga tanpa harus membagikan hal pribadi.</p><textarea id="refleksi" rows="3" style="width:100%;border:1px solid #cbd9d4;border-radius:10px;padding:10px;font:inherit" placeholder="Tuliskan refleksimu di sini..."></textarea><button class="btn gold" onclick="saveReflection()">Simpan refleksi di perangkat ini</button><div id="saved" class="feedback correct"></div></div>
+  <div class="callout"><b>Penutup:</b> Menyambut baligh berarti belajar menjadi Muslim yang bertanggung jawab. Tumbuhlah dengan ilmu, ibadah, akhlak mulia, dan saling menghormati.</div>
+  <button class="btn primary" onclick="window.print()">Cetak lembar refleksi</button>
+ </div></section>
+</main>
+<footer>Media Pembelajaran Interaktif PAI • SD Kelas 4 • Gunakan dengan pendampingan guru dan orang tua.</footer>
+<script>
+const tabs=[...document.querySelectorAll('nav button')];
+function go(id){tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));window.scrollTo({top:document.querySelector('nav').offsetTop-10,behavior:'smooth'});}
+tabs.forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
+function reveal(id){document.getElementById(id).classList.toggle('show')}
+function feedback(id,msg,type){let e=document.getElementById(id);e.textContent=msg;e.className='feedback show '+(type==='good'?'correct':'incorrect')}
+let done=new Set();
+function complete(n){done.add(n);document.getElementById('progressText').textContent=done.size+' dari 5 pos selesai';document.getElementById('progressBar').style.width=(done.size*20)+'%'}
+const questions=[
+['Apa makna baligh dalam Islam?',['Masa mulai memikul tanggung jawab agama','Masa ketika mulai sekolah','Masa ketika menjadi orang tua'],0,'Baligh menandai dimulainya tanggung jawab agama secara penuh.'],
+['Pernyataan yang benar tentang waktu baligh adalah…',['Semua anak sama waktunya','Setiap orang dapat berbeda waktunya','Hanya terjadi pada usia sekolah dasar'],1,'Pertumbuhan setiap orang berbeda. Hindari membandingkan atau mengejek.'],
+['Salah satu tanda baligh pada perempuan adalah…',['Haid','Bisa membaca','Gigi tanggal'],0,'Haid merupakan salah satu tanda baligh pada perempuan.'],
+['Ihtilam berarti…',['Mimpi yang menyebabkan keluarnya mani','Bangun kesiangan','Mimpi saat tidur siang'],0,'Ihtilam adalah keluarnya mani saat tidur.'],
+['Sikap yang tepat terhadap perubahan tubuh teman adalah…',['Mengejeknya','Menyebarkan ceritanya','Menghormati dan menjaga privasinya'],2,'Perubahan tubuh bersifat pribadi. Kita harus santun dan menjaga privasi.'],
+['Setelah baligh, seorang Muslim wajib…',['Menjalankan kewajiban agama','Berhenti belajar','Tidak perlu dibimbing'],0,'Kewajiban agama dijalankan dengan ilmu dan tanggung jawab.'],
+['Puasa Ramadan dilakukan sejak…',['Terbit fajar sampai terbenam matahari','Matahari terbit sampai Zuhur','Zuhur sampai Isya'],0,'Puasa berlangsung dari terbit fajar hingga matahari terbenam.'],
+['Kegiatan sebelum fajar pada bulan Ramadan disebut…',['Berbuka','Sahur','Tarawih'],1,'Sahur dilakukan sebelum fajar.'],
+['Jika anak merasa tidak sehat ketika belajar berpuasa, sebaiknya…',['Diam saja','Memaksakan diri','Memberi tahu orang tua atau guru'],2,'Kesehatan anak harus dijaga dan orang dewasa perlu diberi tahu.'],
+['Puasa Ramadan diwajibkan bagi Muslim yang…',['Telah baligh dan memenuhi syarat serta mampu','Baru bisa berjalan','Sedang bermain'],0,'Kewajiban puasa berlaku bagi yang memenuhi syarat; ada keringanan syar’i.'],
+['Salat Jumat dilaksanakan sebanyak…',['Dua rakaat','Tiga rakaat','Empat rakaat'],0,'Salat Jumat terdiri dari dua rakaat dan didahului dua khutbah.'],
+['Salat Jumat dilaksanakan pada hari…',['Senin','Jumat','Minggu'],1,'Salat Jumat dilaksanakan pada hari Jumat pada waktu Zuhur.'],
+['Ketika khutbah Jumat berlangsung, kita sebaiknya…',['Mengobrol','Bermain','Mendengarkan dengan tertib'],2,'Mendengarkan khutbah dengan tenang adalah sikap yang baik.'],
+['Salat Jumat diwajibkan bagi…',['Semua orang tanpa syarat','Laki-laki Muslim yang memenuhi syarat','Anak-anak dan perempuan saja'],1,'Kewajiban Jumat berlaku bagi laki-laki Muslim yang memenuhi syarat fikih.'],
+['Perempuan yang tidak mengikuti salat Jumat melaksanakan…',['Salat Zuhur','Salat Subuh dua kali','Tidak perlu salat'],0,'Perempuan melaksanakan salat Zuhur.'],
+['Salat sunah adalah salat yang…',['Dianjurkan untuk dikerjakan','Menggantikan semua salat wajib','Hanya dilakukan saat sakit'],0,'Salat sunah dianjurkan; melakukannya berpahala.'],
+['Salat duha dikerjakan pada…',['Waktu pagi setelah matahari naik','Tengah malam setelah tidur','Setelah Magrib'],0,'Salat duha dilakukan pada waktu duha hingga menjelang Zuhur.'],
+['Salat tahajud dilakukan…',['Setelah tidur pada malam hari','Sebelum berbuka','Saat khutbah Jumat'],0,'Tahajud adalah salat malam setelah tidur.'],
+['Salat rawatib adalah salat sunah yang…',['Mengiringi salat fardu','Hanya dilakukan hari Jumat','Menggantikan puasa'],0,'Rawatib mengiringi salat fardu, sebelum atau sesudahnya.'],
+['Temanmu belum hafal bacaan salat. Sikap terbaik adalah…',['Menertawakan','Membantu belajar dengan sabar','Melarangnya salat'],1,'Saling membantu dan belajar dengan sabar mencerminkan akhlak mulia.']
+];
+function buildQuiz(){let root=document.getElementById('quiz');root.innerHTML='';questions.forEach((q,i)=>{let d=document.createElement('div');d.className='question';d.innerHTML=`<div class="qnum">SOAL ${i+1} DARI 20</div><p><b>${q[0]}</b></p>`;q[1].forEach((a,j)=>{d.innerHTML+=`<label style="display:block;margin:7px 0"><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${a}</label>`});d.innerHTML+=`<div class="feedback" id="ex${i}"></div>`;root.appendChild(d)})}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector(`input[name=q${i}]:checked`);let ok=chosen&&Number(chosen.value)===q[2];if(ok)score++;let e=document.getElementById('ex'+i);e.textContent=(ok?'Benar! ':'Belum tepat. Jawaban: '+String.fromCharCode(65+q[2])+'. ')+q[3];e.className='feedback show '+(ok?'correct':'incorrect')});document.getElementById('score').textContent=score+'/20';document.getElementById('resultTitle').textContent=score>=17?'Hebat! Kamu sangat memahami materi.':score>=13?'Bagus! Tingkatkan sedikit lagi.':'Ayo belajar kembali dengan semangat!';document.getElementById('resultText').textContent='Kamu menjawab benar '+score+' dari 20 soal. Baca pembahasan setiap soal, lalu coba lagi jika perlu.';document.getElementById('result').style.display='block';document.getElementById('result').scrollIntoView({behavior:'smooth',block:'center'})}
+function resetQuiz(){buildQuiz();document.getElementById('result').style.display='none';}
+function saveReflection(){let n=document.getElementById('aksiNama').value.trim(),r=document.getElementById('refleksi').value.trim();let s=document.getElementById('saved');s.textContent='Refleksi tersimpan sementara di halaman ini. Kebiasaan: '+(n||'belum diisi')+'. '+(r?'Terima kasih sudah berefleksi!':'Kamu bisa menambahkan refleksi kapan saja.');s.className='feedback show correct'}
+buildQuiz();
+</script>
+</body></html>
